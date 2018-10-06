@@ -91,6 +91,9 @@
                     <connections>
                         <outlet property="darkModeObject" destination="C0z-Q0-kin" id="7KJ-DG-flR"/>
                         <outlet property="darkmodeString" destination="K3c-2Z-Fg3" id="WfC-jh-o8p"/>
+                        <outlet property="itemPriceField" destination="Nat-wp-ka3" id="1Ju-N5-trs"/>
+                        <outlet property="wageTextField" destination="xic-6n-rFu" id="uO1-nF-Aj2"/>
+                        <segue destination="qDI-Xi-NqZ" kind="presentation" identifier="result" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="nho-5c-Hth"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,26 +103,51 @@
         <!--Show ResultVCV-->
         <scene sceneID="TIZ-fA-bMz">
             <objects>
-                <viewController id="qDI-Xi-NqZ" customClass="showResultVCV" customModule="GoalCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="qDI-Xi-NqZ" customClass="showResultVCV" customModule="GoalCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JE1-gA-8ba">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="290 hrs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfz-LP-hNn">
-                                <rect key="frame" x="57" y="68" width="260" height="196"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="384 hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beU-2J-jcJ" customClass="customehourTextfield" customModule="GoalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="23" y="131" width="336" height="228"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="67"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="79"/>
+                                <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qis-DN-3DK" customClass="customeDoneButton" customModule="GoalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="125" y="299" width="125" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.10602890099701512" blue="0.069887245209846793" alpha="0.93241652397260277" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="35"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePress:" destination="qDI-Xi-NqZ" eventType="touchUpInside" id="Y6X-Xe-xdh"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.011762458831071854" green="0.011766193434596062" blue="0.01176127977669239" alpha="0.744140625" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="geC-c9-oOB"/>
                     </view>
+                    <connections>
+                        <outlet property="doneButton" destination="Qis-DN-3DK" id="yVT-U6-9Vr"/>
+                        <outlet property="hoursLable" destination="beU-2J-jcJ" id="ESx-Hk-BqB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhH-Jc-cxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4940 hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="ScW-4b-8A3">
+                    <rect key="frame" x="0.0" y="0.0" width="359" height="244"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.16380089519999999" green="0.1679961979" blue="0.21317636970000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="95"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </objects>
-            <point key="canvasLocation" x="850" y="132"/>
+            <point key="canvasLocation" x="930" y="132"/>
         </scene>
     </scenes>
     <resources>
