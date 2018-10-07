@@ -16,6 +16,8 @@
 		77F21D7F2168901100D6FC02 /* GoalCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F21D7E2168901100D6FC02 /* GoalCalculatorUITests.swift */; };
 		77F21D932168955200D6FC02 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F21D922168955200D6FC02 /* CurrencyTextField.swift */; };
 		77F21D9521689D3F00D6FC02 /* showResultVCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F21D9421689D3F00D6FC02 /* showResultVCV.swift */; };
+		77F21D992168B43600D6FC02 /* customehourTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F21D982168B43600D6FC02 /* customehourTextfield.swift */; };
+		77F21D9B2168B44A00D6FC02 /* customeDoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F21D9A2168B44A00D6FC02 /* customeDoneButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		77F21D802168901100D6FC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77F21D922168955200D6FC02 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 		77F21D9421689D3F00D6FC02 /* showResultVCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showResultVCV.swift; sourceTree = "<group>"; };
+		77F21D982168B43600D6FC02 /* customehourTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customehourTextfield.swift; sourceTree = "<group>"; };
+		77F21D9A2168B44A00D6FC02 /* customeDoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customeDoneButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				77F21D922168955200D6FC02 /* CurrencyTextField.swift */,
+				77F21D982168B43600D6FC02 /* customehourTextfield.swift */,
+				77F21D9A2168B44A00D6FC02 /* customeDoneButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -294,9 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77F21D9B2168B44A00D6FC02 /* customeDoneButton.swift in Sources */,
 				77F21D932168955200D6FC02 /* CurrencyTextField.swift in Sources */,
 				77F21D9521689D3F00D6FC02 /* showResultVCV.swift in Sources */,
 				77F21D612168900900D6FC02 /* HomeVc.swift in Sources */,
+				77F21D992168B43600D6FC02 /* customehourTextfield.swift in Sources */,
 				77F21D5F2168900900D6FC02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

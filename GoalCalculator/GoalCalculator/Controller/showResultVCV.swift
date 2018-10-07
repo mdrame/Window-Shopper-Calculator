@@ -9,6 +9,16 @@
 import UIKit
 
 class showResultVCV: UIViewController {
+    
+    @IBOutlet weak var hoursLable: UILabel!
+    
+    @IBOutlet weak var doneButton: UIButton!
+    
+    @IBAction func donePress(_ sender: customeDoneButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
