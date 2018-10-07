@@ -8,7 +8,12 @@
 
 import UIKit
 
+
 class showResultVCV: UIViewController {
+    
+    
+    
+    var wageclass: Wage!
     
     @IBOutlet weak var hoursLable: UILabel!
     
@@ -22,7 +27,17 @@ class showResultVCV: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if Wage.result != nil {
 
+        hoursLable.text = "\(Wage.result!) Hrs"
+            
+        } else {
+            
+            // tell user to go back and enter number 
+            
+        }
+ 
         // Do any additional setup after loading the view.
     }
     

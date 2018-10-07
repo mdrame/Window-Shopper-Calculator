@@ -8,7 +8,29 @@
 
 import UIKit
 
+
+
+
 class HomeVc: UIViewController {
+    
+    var wage: Wage!
+   
+ 
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+  
+        
+        //  ------- programmaticUIButton function called under----- //
+        programmaticUIButton()
+        
+        wage = Wage()
+        
+        
+    }
+    
+    
     
     @IBOutlet weak var darkModeObject: UISwitch!
     
@@ -18,6 +40,7 @@ class HomeVc: UIViewController {
 
     }
     // ----- dark mode function later call in darkMode action ---- //
+    
     func darkmodeactive () {
 
         if darkModeObject.isOn {
@@ -63,21 +86,24 @@ class HomeVc: UIViewController {
     
     
     @objc func calculatedButtonPress() {
-     
-         performSegue(withIdentifier: "result", sender: self)
         
         
-    }
-    
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let wagetext = wageTextField.text , let itemprice = itemPriceField.text {
+            
+            if let wage = Double(wagetext) , let itemprices = Double(itemprice) {
+                
+                
+                
+               Wage.result = "\(Wage.getHours(yourWage: wage, itemPrice: itemprices))"
+   
+        }
+            
+        }
         
-        //  ------- programmaticUIButton function called under----- //
-        programmaticUIButton()
         
+                // error might occur under
+             
+                performSegue(withIdentifier: "result", sender: self)
   
         
     }
@@ -85,9 +111,16 @@ class HomeVc: UIViewController {
     
     
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? showResultVCV {
+            
+            destination.wageclass = wage
+          
+            }
+        }
 
+    
+    
 
 }
 
