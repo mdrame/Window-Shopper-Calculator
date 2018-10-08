@@ -21,9 +21,10 @@ import UIKit
     
     func call() {
         
-        layer.cornerRadius = 8.0
-        layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        layer.borderWidth = 0.0
+        layer.cornerRadius = 9.0
+        layer.borderColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        layer.borderWidth = 6
+        
         
         
     }

@@ -14,8 +14,7 @@ import UIKit
     override func prepareForInterfaceBuilder() {
         
         call()
-        
-        
+ 
     }
     
     func call() {

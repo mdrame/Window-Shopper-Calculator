@@ -11,6 +11,7 @@ import UIKit
 
 
 
+
 class HomeVc: UIViewController {
     
     var wage: Wage!
@@ -26,6 +27,17 @@ class HomeVc: UIViewController {
         programmaticUIButton()
         
         wage = Wage()
+        
+        
+        
+        
+        // --------- warking lable corner radius ------- //
+        
+       warningLabel.layer.cornerRadius = 10
+        warningLabel.layer.borderWidth = 1
+        warningLabel.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        view.addSubview(warningLabel)
         
         
     }
@@ -57,14 +69,7 @@ class HomeVc: UIViewController {
     
     @IBOutlet weak var darkmodeString: UILabel!
     
-    
-    // --------------- textfield obejcts and action unders ------- //
-    
-    @IBOutlet weak var wageTextField: CurrencyTextField!
-    
-    
-    @IBOutlet weak var itemPriceField: CurrencyTextField!
-    
+   
     
     
     // --------------- under here is programmatic UIButton function and action call ------- //
@@ -84,26 +89,54 @@ class HomeVc: UIViewController {
        
     }
     
+    // ------------- red warning label object and action  indicatior  -------------- //
+    
+  
+    @IBOutlet weak var warningLabel: UILabel!
+    
+    @IBOutlet weak var warkingtext: UILabel!
+    
+    
+    
+    // --------------- textfield obejcts and action unders ------- //
+    
+    @IBOutlet weak var wageTextField: CurrencyTextField!
+    
+    
+    @IBOutlet weak var itemPriceField: CurrencyTextField!
+    
+
+    
+    
+
+    
     
     @objc func calculatedButtonPress() {
         
-        
         if let wagetext = wageTextField.text , let itemprice = itemPriceField.text {
             
-            if let wage = Double(wagetext) , let itemprices = Double(itemprice) {
+            if wagetext.isEmpty , itemprice.isEmpty{
+                
+                 warningLabel.isHidden = false
+                    warkingtext.isHidden = false
+         
+            } else {
                 
                 
+                Wage.result = Wage.getHours(yourWage: Double(wagetext)!, itemPrice: Double(itemprice)!)
+                warkingtext.isHidden = true
+                warningLabel.isHidden = true
                 
-               Wage.result = "\(Wage.getHours(yourWage: wage, itemPrice: itemprices))"
-   
+                performSegue(withIdentifier: "result", sender: self)
+               
+     
         }
             
         }
+       
         
         
-                // error might occur under
-             
-                performSegue(withIdentifier: "result", sender: self)
+        
   
         
     }

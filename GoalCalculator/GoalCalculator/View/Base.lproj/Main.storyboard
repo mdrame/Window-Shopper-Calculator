@@ -72,8 +72,23 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLt-5m-1OP">
+                                <rect key="frame" x="168" y="152" width="29" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.10602890099999999" blue="0.069887245210000004" alpha="0.93241652399999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="field empty ‼️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXM-XS-Kb9">
+                                <rect key="frame" x="135" y="176" width="118" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.46642883042400873" blue="0.64813496869421905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.80286326142131981" green="0.37447857201515139" blue="0.52036375480704566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f7H-9t-81L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="5bZ-fe-Jcl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xic-6n-rFu" secondAttribute="trailing" constant="39" id="7lH-OP-OsP"/>
@@ -93,6 +108,8 @@
                         <outlet property="darkmodeString" destination="K3c-2Z-Fg3" id="WfC-jh-o8p"/>
                         <outlet property="itemPriceField" destination="Nat-wp-ka3" id="1Ju-N5-trs"/>
                         <outlet property="wageTextField" destination="xic-6n-rFu" id="uO1-nF-Aj2"/>
+                        <outlet property="warkingtext" destination="LXM-XS-Kb9" id="p3r-my-FbM"/>
+                        <outlet property="warningLabel" destination="VLt-5m-1OP" id="ma9-kZ-R8H"/>
                         <segue destination="qDI-Xi-NqZ" kind="presentation" identifier="result" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="nho-5c-Hth"/>
                     </connections>
                 </viewController>
@@ -108,11 +125,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beU-2J-jcJ" customClass="customehourTextfield" customModule="GoalCalculator" customModuleProvider="target">
-                                <rect key="frame" x="23" y="131" width="336" height="228"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="beU-2J-jcJ" customClass="customehourTextfield" customModule="GoalCalculator" customModuleProvider="target">
+                                <rect key="frame" x="23" y="147" width="336" height="212"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="79"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="75"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -147,7 +164,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="930" y="132"/>
+            <point key="canvasLocation" x="928.79999999999995" y="131.78410794602701"/>
         </scene>
     </scenes>
     <resources>

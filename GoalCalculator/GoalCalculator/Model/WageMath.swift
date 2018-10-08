@@ -12,13 +12,13 @@ import Foundation
 class Wage  {
     
     
-    class func getHours(yourWage wage: Double, itemPrice item: Double) -> Int {
+    class func getHours(yourWage wage: Double, itemPrice item: Double) ->Int {
     
         return Int(ceil( item / wage))
     
     }
     
-    static var result: String?
+    static var result: Int?
 
     
     

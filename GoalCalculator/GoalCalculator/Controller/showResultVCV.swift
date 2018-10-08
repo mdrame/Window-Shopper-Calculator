@@ -9,6 +9,9 @@
 import UIKit
 
 
+
+
+
 class showResultVCV: UIViewController {
     
     
@@ -20,6 +23,9 @@ class showResultVCV: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     
     @IBAction func donePress(_ sender: customeDoneButton) {
+        
+        Wage.result = nil
+  
         
         dismiss(animated: true, completion: nil)
     }
