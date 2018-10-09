@@ -12,7 +12,16 @@ import UIKit
 
 
 
-class HomeVc: UIViewController {
+class HomeVc: UIViewController, SideSelectionDelegate {
+    
+    func didTapDoneButon(itemprice: String, wagemaking: String) {
+        
+        wageTextField.text = wagemaking
+        itemPriceField.text = itemprice
+        
+    }
+    
+
     
     var wage: Wage!
    
@@ -127,6 +136,9 @@ class HomeVc: UIViewController {
                 warkingtext.isHidden = true
                 warningLabel.isHidden = true
                 
+               
+                
+                
                 performSegue(withIdentifier: "result", sender: self)
                
      
@@ -148,6 +160,7 @@ class HomeVc: UIViewController {
         if let destination = segue.destination as? showResultVCV {
             
             destination.wageclass = wage
+            destination.selectionDelegate = self
           
             }
         }

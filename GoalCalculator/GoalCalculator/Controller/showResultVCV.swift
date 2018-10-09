@@ -9,12 +9,17 @@
 import UIKit
 
 
+// boss screen
 
+protocol SideSelectionDelegate {
+    func didTapDoneButon (itemprice: String, wagemaking: String)
+    
+}
 
 
 class showResultVCV: UIViewController {
     
-    
+    var selectionDelegate: SideSelectionDelegate!
     
     var wageclass: Wage!
     
@@ -22,9 +27,15 @@ class showResultVCV: UIViewController {
     
     @IBOutlet weak var doneButton: UIButton!
     
+    var emptyWage = ""
+    var emptyItemprice = ""
+    
     @IBAction func donePress(_ sender: customeDoneButton) {
         
         Wage.result = nil
+        
+        
+        selectionDelegate?.didTapDoneButon(itemprice: emptyWage , wagemaking: emptyItemprice)
   
         
         dismiss(animated: true, completion: nil)
