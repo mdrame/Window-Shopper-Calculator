@@ -1,6 +1,6 @@
 # Window-Shopper-Calculator
 
 
-<img scr="one"/>
-<img scr="two"/>
-<img scr="three"/>
+<img scr="one.png"/>
+<img scr="two.png"/>
+<img scr="three.png"/>
